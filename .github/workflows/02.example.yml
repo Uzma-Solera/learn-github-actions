@@ -1,0 +1,13 @@
+name: example-02
+on: workflow_dispatch
+jobs:
+  Container-jobs:
+    runs-on: self-hosted
+    container:
+      image: docker.io/rkalluru/learnk8s:rhel9-bare
+    steps:
+      - name: just hello
+        run: echo hello
+
+
+
