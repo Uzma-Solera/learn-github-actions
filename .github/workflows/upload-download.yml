@@ -12,11 +12,11 @@ jobs:
           name: files
           path: new.txt
 
-    stage2:
-      runs-on: ubuntu-latest
-      steps:
-        - name: download text file
-          uses: actions/download-artifact@v4
-          with:
-            name: files
-        - run: ls -l
+  stage2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: download text file
+        uses: actions/download-artifact@v4
+        with:
+          name: files
+      - run: ls -l
