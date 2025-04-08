@@ -1,0 +1,7 @@
+name: common
+on: [workflow_call]
+jobs:
+  Test1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "one common Task"

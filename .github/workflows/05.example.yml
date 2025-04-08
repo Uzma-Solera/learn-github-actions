@@ -2,4 +2,4 @@ name: example05
 on: [push]
 jobs:
   common-jobs:
-    uses: /.github/workflows/common.yml
+    uses: ./.github/workflows/common.yml
