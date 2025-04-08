@@ -9,6 +9,7 @@ jobs:
     steps:
       - run: echo "The job was automatically triggered by ${{ github.event_name }}"
       - run: sleep 20
+  Test2:
     concurrency:
       group: demo
       cancel-in-progress: true
