@@ -1,0 +1,8 @@
+name: example06
+on: [push]
+jobs:
+  Test1:
+    runs-on: ubuntu-latest
+    steps:
+      -run: |
+        echo ${{ job.container.id }}
