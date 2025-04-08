@@ -1,0 +1,12 @@
+name: example04
+on: [push]
+jobs:
+  Test1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "The job was automatically triggered by ${{ github.event_name }} event."
+  Test2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "The job was automatically triggered by ${{ github.event_name }} event."
+
