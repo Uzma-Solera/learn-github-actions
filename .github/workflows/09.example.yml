@@ -1,0 +1,11 @@
+name: example09
+on: [working_dispatch]
+jobs:
+  Explore-github-actions:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version: [10, 12, 14]
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      -run: echo "This job is triggered by ${{ github.event_name }} event."
