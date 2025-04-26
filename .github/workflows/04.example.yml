@@ -1,0 +1,17 @@
+name: example04
+on: [push]
+jobs:
+  Test1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This job was triggered by ${{ github.event_name }} event."
+  Test2:
+    runs-on: ubuntu-latest
+    needs: Test1
+    steps:
+      - run: echo "This job was triggered by ${{ github.event_name }} event."
+  Test3:
+    runs-on: ubuntu-latest
+    needs: ["Test1", "Test2"]
+    steps:
+      - run: echo "This job was triggered by ${{ github.event_name }} event."
